@@ -157,11 +157,6 @@ else ifeq  ($(HARDWARE_MOTHERBOARD),9)
 HARDWARE_VARIANT ?= Sanguino
 MCU              ?= atmega644p
 
-#Gen3 Monolithic Electronics
-else ifeq  ($(HARDWARE_MOTHERBOARD),22)
-HARDWARE_VARIANT ?= Sanguino
-MCU              ?= atmega644p
-
 #Megatronics
 else ifeq  ($(HARDWARE_MOTHERBOARD),70)
 HARDWARE_VARIANT ?= arduino
@@ -241,7 +236,7 @@ VPATH += $(HARDWARE_DIR)/libraries/Wire
 VPATH += $(HARDWARE_DIR)/libraries/Wire/utility
 VPATH += $(HARDWARE_DIR)/libraries/LiquidTWI2
 endif
-ifeq ($(WIRE), 1)
+ifeq ($(WIRE, 1)
 VPATH += $(HARDWARE_DIR)/libraries/Wire
 VPATH += $(HARDWARE_DIR)/libraries/Wire/utility
 endif
@@ -265,8 +260,7 @@ CXXSRC = WMath.cpp WString.cpp Print.cpp Marlin_main.cpp	\
 	MarlinSerial.cpp Sd2Card.cpp SdBaseFile.cpp SdFatUtil.cpp	\
 	SdFile.cpp SdVolume.cpp motion_control.cpp planner.cpp		\
 	stepper.cpp temperature.cpp cardreader.cpp ConfigurationStore.cpp \
-	watchdog.cpp SPI.cpp Servo.cpp Tone.cpp ultralcd.cpp digipot_mcp4451.cpp \
-	vector_3.cpp qr_solve.cpp
+	watchdog.cpp SPI.cpp Servo.cpp Tone.cpp ultralcd.cpp digipot_mcp4451.cpp
 ifeq ($(LIQUID_TWI2), 0)
 CXXSRC += LiquidCrystal.cpp
 else
