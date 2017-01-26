@@ -1,7 +1,7 @@
 # Misaka 的 3D 打印机的魔改 Marlin 固件
 ##机器情况：
 大体情况如下：
- - 使用 200*200*200 的常见 Prusa I3 结构
+ - 使用 200\*200\*200 的常见 Prusa I3 结构
  - 1.8度 1\16微步 歩进电机
  - RAMPS 1.3 EFB (Extruder, Fan, Bed)
  - RepRapDiscount FULL GRAPHIC Smart Controller
